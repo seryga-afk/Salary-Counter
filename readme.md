@@ -1,0 +1,1 @@
+https://seryga-afk.github.io/Salary-Counter/
