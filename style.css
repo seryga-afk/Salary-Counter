@@ -8,13 +8,58 @@
 body{
     width: 100vw;
     height: 100vh;
+    background-color: black;
+    color: #fff;
+    overflow: hidden;
 }
 #app{
     width: 100%;
     height: 100%;
     display: flex;
+    gap: 1%;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 2em;
     font-weight: bold;
+    
+}
+
+.submit{
+    cursor: pointer;
+}
+.name,.submit{
+    width: 20%;
+    height: 3%;
+    text-align: center;
+    background-color: rgba(167, 159, 159, 0.637);
+    outline: none;
+    border: 1px solid rgba(167, 159, 159, 0.637);
+    border-radius: 5px;
+    transition: .2s linear all;
+}
+.name:hover,.submit:hover{
+    border: 1px solid rgba(252, 246, 246, 0.897);
+}
+.animation-name{
+    animation: hover-name 2s ease-in-out 1;
+}
+@keyframes hover-name{
+    to{
+        transform: translateX(100%);
+    }
+}
+@media (max-width: 800px) {
+    .name,.submit{
+        width: 30%;
+    }
+}
+@media (max-width: 600px) {
+    .name,.submit{
+        width: 50%;
+    }
+}@media (max-width: 300px) {
+    .name,.submit{
+        width: calc(100% - 20px);
+    }
 }
